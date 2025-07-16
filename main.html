@@ -1,0 +1,439 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saif Amer - Venture Capital Executive & Strategic Advisor</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Roboto', sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background-color: #121212; 
+            color: #c0c0c0; 
+            line-height: 1.7; 
+            scroll-behavior: smooth;
+            position: relative;
+        }
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(18, 18, 18, 0.9);
+            z-index: 1000;
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+            transition: background 0.3s;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav li {
+            display: inline-block;
+            margin: 0 20px;
+        }
+        nav a {
+            color: #c0c0c0;
+            text-decoration: none;
+            font-weight: 400;
+            font-size: 1.1em;
+            transition: color 0.3s, transform 0.3s;
+        }
+        nav a:hover {
+            color: #ffffff;
+            transform: translateY(-2px);
+        }
+        header { 
+            text-align: center; 
+            padding: 150px 30px 100px; 
+            background: linear-gradient(to bottom, #1f1f1f 0%, #121212 100%); 
+            position: relative;
+            overflow: hidden;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iODBweCIgaGVpZ2h0PSI4MHB4IiB2aWV3Qm94PSIwIDAgODAgODAiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8ZyBpZD0iQXJ0Ym9hcmQiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJBcnRib2FyZCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEyMzUuMDAwMDAwLC03OS4wMDAwMDApIiBmaWxsPSIjMDAwMDAwIiBmaWxsLW9wYWNpdHk9IjAuMDUiPgogICAgICAgICAgICA8cGF0aCBjbGFzcz0ic3QwIiBkPSJNMTIzNS4wLDEzOS4wTDExNTMuMCwxMzkuMFMxMTUzLjAsMTM5LjAsMTE1My4wLDEzOS4wTDExNTMuMCwxMzkuMFoiIGlkPSJQYXRoIj48L3BhdGg+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=') repeat; /* Subtle metallic texture pattern */
+            opacity: 0.05;
+            background-attachment: fixed; /* Parallax effect */
+        }
+        h1 { 
+            font-size: 3.2em; 
+            margin-bottom: 20px; 
+            color: #ffffff; 
+            letter-spacing: 0.5px;
+            font-weight: 300;
+        }
+        .summary { 
+            font-size: 1.3em; 
+            color: #a9a9a9; 
+            max-width: 800px;
+            margin: 0 auto 40px;
+        }
+        section { 
+            max-width: 900px; 
+            margin: 80px auto; 
+            padding: 0 30px; 
+            opacity: 0; 
+            transform: translateY(40px); 
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        section.visible { 
+            opacity: 1; 
+            transform: translateY(0); 
+        }
+        h2 { 
+            font-size: 2.2em; 
+            margin-bottom: 40px; 
+            color: #ffffff;
+            text-align: left;
+            position: relative;
+            padding-bottom: 15px;
+            font-weight: 400;
+        }
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 2px;
+            background: linear-gradient(to right, #c0c0c0, transparent);
+        }
+        p { 
+            font-size: 1.1em; 
+            margin-bottom: 25px;
+            font-weight: 300;
+        }
+        ul { 
+            font-size: 1.1em; 
+            list-style: none; 
+            padding: 0;
+            margin-bottom: 25px;
+        }
+        ul li {
+            margin-bottom: 20px;
+            position: relative;
+            padding-left: 30px;
+            font-weight: 300;
+        }
+        ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 8px;
+            height: 8px;
+            background: #c0c0c0;
+            border-radius: 50%;
+        }
+        .timeline { 
+            position: relative; 
+            margin: 60px 0; 
+        }
+        .timeline::before { 
+            content: ''; 
+            position: absolute; 
+            width: 1px; 
+            background: #333; 
+            top: 0; 
+            bottom: 0; 
+            left: 20px; 
+        }
+        .event { 
+            position: relative; 
+            padding-left: 60px; 
+            margin-bottom: 50px; 
+            transition: transform 0.4s ease, opacity 0.4s ease;
+            opacity: 0;
+            transform: translateX(-30px);
+        }
+        .event.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .event::before { 
+            content: '';
+            position: absolute;
+            left: 16px;
+            top: 5px;
+            width: 10px;
+            height: 10px;
+            background: #c0c0c0;
+            border-radius: 50%;
+            box-shadow: 0 0 5px rgba(192,192,192,0.3);
+            transition: background 0.3s;
+        }
+        .event:hover::before {
+            background: #ffffff;
+        }
+        .event h3 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+            color: #ffffff;
+            font-weight: 400;
+        }
+        .event p {
+            font-size: 1.05em;
+        }
+        .achievements { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+            gap: 30px;
+        }
+        .item { 
+            background: #1f1f1f; 
+            padding: 25px; 
+            border-radius: 8px; 
+            text-align: center; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+        .item:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 8px 20px rgba(192,192,192,0.1);
+        }
+        .number { 
+            font-size: 2.8em; 
+            font-weight: 700; 
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+        .cool-stuff { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 30px;
+        }
+        .cool-item { 
+            background: #1f1f1f; 
+            padding: 25px; 
+            border-radius: 8px; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+            transition: transform 0.4s ease;
+        }
+        .cool-item:hover { 
+            transform: translateY(-5px); 
+        }
+        .cool-item h3 {
+            font-size: 1.4em;
+            color: #ffffff;
+            margin-bottom: 15px;
+            font-weight: 400;
+        }
+        .socials { 
+            text-align: center; 
+            padding: 60px 0;
+            background: #1f1f1f;
+            margin-top: 80px;
+        }
+        .social-link { 
+            margin: 0 20px; 
+            color: #c0c0c0; 
+            text-decoration: none; 
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+        .social-link:hover { 
+            color: #ffffff; 
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #333;
+            color: #c0c0c0;
+            padding: 10px 15px;
+            border-radius: 50%;
+            text-decoration: none;
+            opacity: 0;
+            transition: opacity 0.3s, transform 0.3s;
+            font-size: 1.2em;
+        }
+        .back-to-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .back-to-top:hover {
+            background: #444;
+            color: #ffffff;
+        }
+        @media (max-width: 768px) { 
+            nav li { margin: 0 10px; font-size: 1em; }
+            .timeline::before { left: 20px; } 
+            .event { padding-left: 50px; } 
+            .event::before { left: 16px; } 
+            .achievements, .cool-stuff { grid-template-columns: 1fr; } 
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#nutshell">Summary</a></li>
+            <li><a href="#achievements">Achievements</a></li>
+            <li><a href="#current-focus">Current Focus</a></li>
+            <li><a href="#story">Professional Journey</a></li>
+            <li><a href="#cool-stuff">Expertise & Background</a></li>
+            <li><a href="#socials">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Saif Amer</h1>
+        <p class="summary">Venture capital executive and strategic advisor with expertise in Web3 technology and emerging markets, overseeing substantial portfolios and guiding governmental tech initiatives.</p>
+    </header>
+
+    <section id="nutshell">
+        <h2>Professional Summary</h2>
+        <p>Saif Amer is a venture capital executive and strategic advisor recognized for generating over $500 million in sales throughout his career. With a focus on Web3 technology and emerging markets, he manages a portfolio exceeding $1.2 billion as Chief of Partnerships at IBC Group, where he has established more than 100 partnerships with leading projects across four continents. His advisory roles extend to governments, contributing to technological innovation and economic development strategies that integrate advanced tech solutions with regulatory frameworks.</p>
+    </section>
+
+    <section id="achievements">
+        <h2>Key Achievements</h2>
+        <div class="achievements">
+            <div class="item">
+                <div class="number">200+</div>
+                <h3>Advisory Roles</h3>
+                <p>Web3-related positions since 2018, influencing strategies for top-tier projects and governmental entities.</p>
+            </div>
+            <div class="item">
+                <div class="number">$1.2B+</div>
+                <h3>Portfolio Value</h3>
+                <p>Overseeing IBC Group's premier portfolio, achieving a 432.8% average ROI in recent years.</p>
+            </div>
+            <div class="item">
+                <div class="number">100+</div>
+                <h3>Successful Launches</h3>
+                <p>Token introductions in Web3, driving significant market impact and growth.</p>
+            </div>
+            <div class="item">
+                <div class="number">$500M+</div>
+                <h3>Sales Generated</h3>
+                <p>Closed deals across venture capital, media, and strategic advisory engagements.</p>
+            </div>
+            <div class="item">
+                <div class="number">$20M+</div>
+                <h3>Capital Deployed</h3>
+                <p>Investments directed or approved, supporting high-potential initiatives in emerging technologies.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="current-focus">
+        <h2>Current Focus</h2>
+        <ul>
+            <li>Advisor on Emerging Markets and Technologies at the Public Investment Fund (PIF), Saudi Arabia: Providing strategic counsel to executives on investment approaches and technology adoption for the world's fifth-largest sovereign wealth fund, with assets estimated at $925 billion.</li>
+            <li>Senior Advisor on Regulatory Infrastructure and Ecosystem at the Ministry of Investment, Saudi Arabia: Developing frameworks to attract foreign investment and streamline licensing processes within the kingdom.</li>
+            <li>Senior Advisor on Emerging Markets and Technology at the Ministry of Communications and Information Technology (MCIT), Egypt: Advising on adoption strategies and regulatory infrastructure to establish Egypt as a regional hub for innovation, with ongoing engagement for specialized expertise.</li>
+            <li>Senior Advisor on Regulatory Landscape and Ecosystem at the Federal Ministry of Communications, Innovation, and Digital Economy, Nigeria: Guiding the creation of robust regulatory environments to support foreign investments in local startups and facilitate international expansions, maintaining collaborative ties for targeted guidance.</li>
+            <li>Leading initiatives with my team to draft AI legislation for countries including Ghana and Uganda, promoting responsible innovation and sustainable development in emerging markets.</li>
+        </ul>
+    </section>
+
+    <section id="story">
+        <h2>Professional Journey</h2>
+        <div class="timeline">
+            <div class="event">
+                <h3>Founder and Chief Marketing Officer, RHinc Marketing (2016–2018)</h3>
+                <p>Established and led a marketing firm specializing in e-commerce, recruitment, and event strategies, serving over 20 clients including Fortune 200 companies and scaling a team during peak growth periods.</p>
+            </div>
+            <div class="event">
+                <h3>Investment Banking Associate, Morgan Stanley (2018)</h3>
+                <p>Conducted in-depth market analyses to support strategic financial planning and decision-making processes.</p>
+            </div>
+            <div class="event">
+                <h3>Founder and Managing Partner, RHinc Investment (2018–2022)</h3>
+                <p>Built a private equity firm focused on cryptocurrency trading, achieving a peak of $60 million in assets under management before a strategic dissolution following the 2021 market cycle, delivering substantial returns to investors.</p>
+            </div>
+            <div class="event">
+                <h3>Chief Marketing Officer, NXTG3NZ (2022–2023)</h3>
+                <p>Directed marketing efforts for a metaverse fashion initiative, assembling a high-performing team and orchestrating the most anticipated NFT release on the Algorand blockchain.</p>
+            </div>
+            <div class="event">
+                <h3>Senior Advisor, Federal Ministry of Communications, Innovation, and Digital Economy, Nigeria (2022–2023)</h3>
+                <p>Advised on regulatory frameworks to enable emerging technologies and attract investments, transitioning to an ongoing consultative role.</p>
+            </div>
+            <div class="event">
+                <h3>Senior Advisor, Ministry of Communications and Information Technology, Egypt (2023)</h3>
+                <p>Contributed to strategies for technology adoption and regulatory development, positioning Egypt as an innovation leader, with continued advisory involvement.</p>
+            </div>
+            <div class="event">
+                <h3>Chief Partnerships Officer, IBC Ventures (2023–Present)</h3>
+                <p>Managing a $1.2 billion portfolio with over $20 million in investments and a 432.8% ROI, while cultivating more than 80 strategic partnerships with leading cryptocurrency projects.</p>
+            </div>
+            <div class="event">
+                <h3>Vice President of Sales, Media Platforms (Roundtable), IBC Group (2024)</h3>
+                <p>Oversaw sales operations, including deal evaluations and team training in advanced methodologies during an interim leadership period.</p>
+            </div>
+            <div class="event">
+                <h3>Head of Business Development, CJN Accelerator/Incubator, IBC Group (2024)</h3>
+                <p>Led development efforts for incubator and accelerator programs, recruiting talent and optimizing deal flows across venture capital and media divisions.</p>
+            </div>
+            <div class="event">
+                <h3>Partner and Chief Business Development Officer, Maxbid Pro (2024–2025)</h3>
+                <p>Directed business growth for an on-chain leverage trading platform, launching staking solutions and achieving over $15 million in volume with more than 2,500 active wallets.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="cool-stuff">
+        <h2>Expertise and Background</h2>
+        <div class="cool-stuff">
+            <div class="cool-item">
+                <h3>Core Competencies</h3>
+                <p>Leadership in guiding high-performing teams through complex initiatives; creative problem-solving to navigate market challenges; marketing strategies that drive substantial growth; and sales expertise in closing high-value transactions across diverse sectors.</p>
+            </div>
+            <div class="cool-item">
+                <h3>Languages</h3>
+                <p>Arabic (fluent), English (fluent), French (advanced), Spanish (professional), German (elementary)—facilitating effective communication in international advisory and investment contexts.</p>
+            </div>
+            <div class="cool-item">
+                <h3>Education</h3>
+                <p>Business Administration and Management, Princeton University; Psychology, University of Chicago; Business Management and Marketing, College of DuPage; Diploma, Naperville North High School—providing a multidisciplinary foundation for strategic decision-making.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="socials" class="socials">
+        <h2>Contact</h2>
+        <p>
+            <a href="https://www.linkedin.com/in/saifamer" class="social-link">LinkedIn</a> |
+            <a href="https://x.com/saifamerr" class="social-link">X</a> |
+            <a href="https://www.instagram.com/theofficialsaifamer" class="social-link">Instagram</a>
+        </p>
+    </section>
+
+    <a href="#" class="back-to-top" id="backToTop">&#8679;</a>
+
+    <script>
+        // Scroll reveal for sections and timeline events
+        const elements = document.querySelectorAll('section, .event');
+        const options = { threshold: 0.1, rootMargin: '0px 0px -50px 0px' };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, options);
+        elements.forEach(el => observer.observe(el));
+
+        // Back to top button
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        });
+    </script>
+</body>
+</html>
