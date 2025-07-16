@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saif Amer - Achievements</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <style>
+        /* Same styles as index.html, copy-paste for consistency */
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; color: #333; scroll-behavior: smooth; }
+        nav { position: fixed; top: 0; width: 100%; background: rgba(0, 123, 255, 0.9); color: white; padding: 10px 20px; z-index: 1000; }
+        nav ul { list-style: none; margin: 0; padding: 0; display: flex; justify-content: center; }
+        nav li { margin: 0 15px; }
+        nav a { color: white; text-decoration: none; font-weight: bold; transition: color 0.3s; }
+        nav a:hover { color: #00c6ff; }
+        section { padding: 50px 20px; max-width: 1200px; margin: auto; }
+        #achievements { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+        .achievement-item { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s; cursor: pointer; }
+        .achievement-item:hover { transform: scale(1.05); }
+        .achievement-number { font-size: 2em; color: #007bff; }
+        @media (max-width: 768px) { nav ul { flex-direction: column; } }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="achievements.html"><i class="fas fa-trophy"></i> Achievements</a></li>
+            <li><a href="current-focus.html"><i class="fas fa-briefcase"></i> Current Focus</a></li>
+            <li><a href="my-story.html"><i class="fas fa-book"></i> My Story</a></li>
+            <li><a href="cool-stuff.html"><i class="fas fa-star"></i> Cool Stuff</a></li>
+            <li><a href="connect.html"><i class="fas fa-link"></i> Connect</a></li>
+        </ul>
+    </nav>
+
+    <section id="achievements" data-aos="fade-up">
+        <h2>Key Achievements 🏆</h2>
+        <div class="achievement-item" data-aos="zoom-in" onclick="alert('200+ Web3 advisory roles since 2018—shaping the future!')">
+            <i class="fas fa-users" style="font-size: 2em; color: #007bff;"></i>
+            <div class="achievement-number">200+</div>
+            <h3>Advisory Roles</h3>
+            <p>Total Web3 advisory related roles since 2018</p>
+        </div>
+        <div class="achievement-item" data-aos="zoom-in" data-aos-delay="100" onclick="alert('$1.2B+ portfolio at IBC Group—high-profile wins!')">
+            <i class="fas fa-wallet" style="font-size: 2em; color: #007bff;"></i>
+            <div class="achievement-number">$1.2B+</div>
+            <h3>Portfolio Value</h3>
+            <p>Directly managing highest profile portfolio at IBC Group</p>
+        </div>
+        <div class="achievement-item" data-aos="zoom-in" data-aos-delay="200" onclick="alert('100+ token launches in Web3—launching stars!')">
+            <i class="fas fa-rocket" style="font-size: 2em; color: #007bff;"></i>
+            <div class="achievement-number">100+</div>
+            <h3>Successful Launches</h3>
+            <p>Token launches in Web3 space</p>
+        </div>
+        <div class="achievement-item" data-aos="zoom-in" data-aos-delay="300" onclick="alert('$500M+ in career sales—closing deals like a boss!')">
+            <i class="fas fa-chart-line" style="font-size: 2em; color: #007bff;"></i>
+            <div class="achievement-number">$500M+</div>
+            <h3>In Sales</h3>
+            <p>Sales closed throughout professional career</p>
+        </div>
+        <div class="achievement-item" data-aos="zoom-in" data-aos-delay="400" onclick="alert('$20M+ capital deployed—fueling innovation!')">
+            <i class="fas fa-money-bill-wave" style="font-size: 2em; color: #007bff;"></i>
+            <div class="achievement-number">$20M+</div>
+            <h3>Capital Deployed</h3>
+            <p>Investments directly actioned or approved by Saif</p>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>AOS.init({ duration: 1000 });</script>
+</body>
+</html>
